@@ -6,6 +6,7 @@ export default StyleSheet.create({
         width: "80%",
         borderBottomColor: "gray",
         borderBottomWidth: 1,
-        fontSize: 18
+        fontSize: 18,
+        color: "black"
     },
 })

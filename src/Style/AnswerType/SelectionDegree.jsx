@@ -10,7 +10,8 @@ export default StyleSheet.create({
     },
     option: {
         text: {
-            fontWeight: "800"
+            fontWeight: "800",
+            color: "black"
         },
         btn: {
             marginTop: 10,

@@ -10,8 +10,6 @@ function SelectionDegree({data, next, action}) {
     const css = styles["SelectionDegree"];
     const localized = strings.Degrees;
 
-    // console.log(data) /// vir como array e implementar
-
     const handlePress = (num) => {
         setSelected(num)
         action({id: data.question_id, value: num})
