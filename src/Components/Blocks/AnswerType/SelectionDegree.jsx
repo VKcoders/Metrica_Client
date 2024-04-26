@@ -11,8 +11,8 @@ function SelectionDegree({data, next, action}) {
     const localized = strings.Degrees;
 
     const handlePress = (num) => {
-        setSelected(num)
-        action({id: data.question_id, value: num})
+        setSelected(num);
+        action({id: data.question_id, value: num});
     }
 
     return (
@@ -35,8 +35,7 @@ function SelectionDegree({data, next, action}) {
                     })
                 }
             </View>
-            {/* { !!selected && <NextBlock action={next.func} text={next.text} /> } */}
-            <NextBlock action={next.func} text={next.text} />
+            { !!selected && <NextBlock action={next.func} text={next.text} /> }
         </>
     )
 }

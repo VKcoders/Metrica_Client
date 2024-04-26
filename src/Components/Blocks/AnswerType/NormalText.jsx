@@ -9,10 +9,10 @@ function NormalText({ action, next, data }) {
     const css = styles["NormalText"];
 
     const handleChange = (t) => {
-        if (t.length > 2) {
+        if (t.length >= 2) {
             setCanSubmit(true);
             action({id: data.question_id, value: t});
-            return
+            return;
         }
         setCanSubmit(false);
     }
@@ -24,8 +24,7 @@ function NormalText({ action, next, data }) {
                 placeholder="resposta..."
                 onChangeText={handleChange}
             />
-            {/* { !!canSubmit && <NextBlock action={next.func} text={next.text} /> } */}
-            <NextBlock action={next.func} text={next.text} />
+            { !!canSubmit && <NextBlock action={next.func} text={next.text} /> }
         </>
     )
 }

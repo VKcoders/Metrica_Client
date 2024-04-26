@@ -3,13 +3,15 @@ import api from "./api";
 const ENDPOINT = '/answer'
 
 export const updateCurrentBlock = async (data, token) => {
-  const {clientId, result, blockName, userId, searchId} = data;
+  const {clientId, result, blockName, userId, searchId, uniqueId, customFilter} = data;
 
   const obj = {
     clientId,
     blockName,    
     answer: result,
     userId,
+    uniqueId,
+    customFilter,
     searchId: !searchId ? 0 : searchId
   }
 

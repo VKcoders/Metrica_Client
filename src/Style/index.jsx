@@ -11,6 +11,7 @@ import Header from "./Components/Header";
 import Search from "./Components/Search";
 import RemainderCard from "./Components/RemainderCard";
 import NoRemainderCard from "./Components/NoRemainderCard";
+import Sponcer from "./Components/Sponcer";
 
 import Warning from "./Blocks/Warning";
 import Introduction from "./Blocks/Introduction";
@@ -41,6 +42,7 @@ export const screens = {
     NextBlock,
     RemainderCard,
     NoRemainderCard,
+    Sponcer,
     // Blocks
     Warning,
     Introduction,

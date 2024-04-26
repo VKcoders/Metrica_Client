@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-
+import { useEffect, useState, useContext } from "react";
+import { Global } from "../../Context";
 import { Text, View, KeyboardAvoidingView } from "react-native";
 
 import { screens as styles } from "../../Style";
@@ -12,6 +12,7 @@ import { getSearchMain } from "../../Service/Search";
 import { updateCurrentBlock } from "../../Service/SearchUpdate";
 
 function Questions({ next, questionId, token, userId, searchId }) {
+    const { uniqueId, filter } = useContext(Global)
     const [blockData, setBlockData] = useState({});
     const [clientId, setClientId] = useState(0);
     const [blockAnswer, setBlockAnswer] = useState([]);
@@ -51,6 +52,8 @@ function Questions({ next, questionId, token, userId, searchId }) {
                     userId: userId,
                     blockName: "question",
                     searchId,
+                    uniqueId,
+                    customFilter: filter,
                     result: [...blockAnswer, toSaveOnBlock],
                 },
                 token

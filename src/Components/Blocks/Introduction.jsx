@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { Global } from "../../Context";
 import { Text, View, KeyboardAvoidingView } from "react-native";
 
 import { screens as styles } from "../../Style";
@@ -11,6 +12,7 @@ import { getSearchIntro } from "../../Service/Search";
 import { updateCurrentBlock } from "../../Service/SearchUpdate";
 
 function Introduction({ next, introId, token, userId, searchId }) {
+    const { uniqueId, setFilter } = useContext(Global)
     const [updataRender, setUpdataRender] = useState(false);
     const [clientId, setClientId] = useState(0);
     const [blockData, setBlockData] = useState({});
@@ -47,15 +49,22 @@ function Introduction({ next, introId, token, userId, searchId }) {
 
         if (blockIndex + 1 >= keys.length) {
             setLoader(true);
+
+            const allQuestions = [...blockAnswer, toSaveOnBlock];
+
             updateCurrentBlock(
                 {
                     clientId,
                     userId: userId,
                     blockName: "intro",
-                    result: [...blockAnswer, toSaveOnBlock],
+                    searchId,
+                    uniqueId,
+                    customFilter: allQuestions[2].text,
+                    result: allQuestions,
                 },
                 token
-            )
+            );
+            setFilter(allQuestions[2].text)
             next();
             setLoader(false);
             return;

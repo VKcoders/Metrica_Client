@@ -14,7 +14,9 @@ function GlobalState({children}) {
   const [user, setUser] = useState({id: '', name: ''});
   const [currentSearch, setCurrentSearch] = useState([]);
   const [history, setHistory] = useState([]);
-
+  const [uniqueId, setUniqueId] = useState('');
+  const [filter, setFilter] = useState('');
+  setFilter
   // useEffect(() => {
   //   async function Jobs() {
   //     const getTokenFromCache = await generateToken({
@@ -44,7 +46,9 @@ function GlobalState({children}) {
     token, setToken,
     user, setUser,
     currentSearch, setCurrentSearch,
-    history, setHistory
+    history, setHistory,
+    uniqueId, setUniqueId,
+    filter, setFilter
   };
 
   return <Context.Provider value={obj}>{children}</Context.Provider>;
