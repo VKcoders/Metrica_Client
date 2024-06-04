@@ -5,19 +5,30 @@ import Block from "../../Components/Blocks";
 import Loader from "../../Components/Loader"
 
 import { getSearchById } from "../../Service/Search";
+import { getSearchsWarning } from "../../Service/Warning";
 
 function Search({navigation: { navigate }, route: {params}}) {
     const { token, user: {id} } = useContext(Global);
     const [searchInfo, setSearchInfo] = useState({});
+    const [pipeline, setPipeline] = useState(["Warning", "Introduction", "Questions"]);
     const [index, setIndex] = useState(0);
     const [loader, setLoader] = useState(true);
-    const pipeline = ["Warning", "Introduction", "Questions"];
+    const [warning, setWarning] = useState({});
 
     useEffect(() => {
         async function Jobs() {
             const data = await getSearchById(params.searchId, token);
+            const warnings = await getSearchsWarning(id, token);
+
             setSearchInfo(data);
-            setLoader(false)
+
+            if (!warnings['first']) {
+                setPipeline(["Introduction", "Questions"])
+                setLoader(false)
+            } else {
+                setWarning(warnings)
+                setLoader(false)
+            }
         };
         Jobs()
     }, [])
@@ -37,7 +48,8 @@ function Search({navigation: { navigate }, route: {params}}) {
         <Loader />
     ) : (
         <DynamicComponent 
-            next={handleNext} 
+            next={handleNext}
+            warnings={warning}
             introId={searchInfo.introduction} 
             questionId={searchInfo.search}
             token={token}
