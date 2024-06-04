@@ -3,11 +3,11 @@ import { Text, TouchableOpacity, View } from "react-native";
 
 import { screens as styles } from "../../../Style";
 
-function SelectionText({ data, next, action }) {
+function SelectionTextLong({ data, next, action }) {
     const [options, setOptions] = useState([]);
     const [selected, setSelected] = useState(false);
     
-    const css = styles["SelectionText"];
+    const css = styles["SelectionBtnInput"];
     
     useEffect(() => {
         const array = data.answer.split(';');
@@ -21,20 +21,20 @@ function SelectionText({ data, next, action }) {
             return;
         }
         setSelected(key);
-    }
+    };
 
     return (
-        <View style={css.constainer}>
+        <View style={css.container}>
             {
                 options.map((text, index) => {
                     const key = "question-" + index;
                     return (
                         <TouchableOpacity 
                             key={key}
-                            style={[css.btn, key === selected && {backgroundColor: "green"}]}
+                            style={[css.btnLong, key === selected && {backgroundColor: "green"}]}
                             onPress={() => handlePress(key, text)}
                         >
-                            <Text style={css.btn.text}>{text}</Text>
+                            <Text style={css.btnLong.text}>{text}</Text>
                         </TouchableOpacity>
                     )
                 })
@@ -43,4 +43,4 @@ function SelectionText({ data, next, action }) {
     )
 }
 
-export default SelectionText;
+export default SelectionTextLong;

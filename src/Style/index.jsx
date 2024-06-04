@@ -22,6 +22,7 @@ import RemainderModal from "./Modal/Remainder";
 
 import NormalText from "./AnswerType/NormalText";
 import SelectionText from "./AnswerType/SelectionText";
+import SelectionBtnInput from "./AnswerType/SelectionBtnInput";
 import SelectionDegree from "./AnswerType/SelectionDegree";
 
 import NextBlock from "./Components/NextBlock"
@@ -53,5 +54,6 @@ export const screens = {
     // Answer Type
     NormalText,
     SelectionDegree,
-    SelectionText
+    SelectionText,
+    SelectionBtnInput
 };
