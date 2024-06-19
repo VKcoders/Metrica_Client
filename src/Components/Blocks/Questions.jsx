@@ -74,9 +74,9 @@ function Questions({ next, questionId, token, userId, searchId }) {
     ) : (
         <>
             <Background index={"1"} />
-            <ScrollView>
-                <KeyboardAvoidingView style={css.container} behavior="height">
-                    <Text style={css.title}>{`Pergunta - ${blockIndex + 1}/${keys.length}`}</Text>
+                {/* <KeyboardAvoidingView style={css.container} behavior="height"> */}
+                    <ScrollView>
+                        <Text style={css.title}>{`Pergunta - ${blockIndex + 1}/${keys.length}`}</Text>
                         <View style={css.content}>
                             <Text style={css.content.text}>{blockData[keys[blockIndex]].question}</Text>
                             <AnswerType
@@ -89,8 +89,8 @@ function Questions({ next, questionId, token, userId, searchId }) {
                                 questionInfo={{ counter: blockIndex, ...blockData[keys[blockIndex]]}}
                             />
                         </View>
-                </KeyboardAvoidingView>
-            </ScrollView>
+                    </ScrollView>
+                {/* </KeyboardAvoidingView> */}
         </>
     )
 }
