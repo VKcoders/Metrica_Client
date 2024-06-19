@@ -1,19 +1,20 @@
 import { StyleSheet, Dimensions } from "react-native";
 
-const { height, width } = Dimensions.get('window')
+const { width } = Dimensions.get('window')
 
 export default StyleSheet.create({
     container: {
         flex: 1,
-        // backgroundColor: "green",
+        width: width * 0.93,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        alignSelf: "center"
     },
     text: {
         color: "black",
-        fontSize: 22,
+        fontSize: 20,
         fontWeight: "600",
-        textAlign: "justify"
+        textAlign: "justify",
+        marginBottom: 10
     }
-
 })

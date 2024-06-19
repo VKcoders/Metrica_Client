@@ -22,7 +22,7 @@ export default StyleSheet.create({
       textAlign: "center",
       color: "black"
     },
-    backgroundColor: "gray",
+    backgroundColor: "#aeb4b8",
     borderRadius: 10,
 
     width: "75%",
@@ -39,7 +39,7 @@ export default StyleSheet.create({
       marginLeft: 20,
       lineHeight: 25
     },
-    backgroundColor: "gray",
+    backgroundColor: "#aeb4b8",
     borderRadius: 10,
 
     width: "100%",

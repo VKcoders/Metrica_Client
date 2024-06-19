@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { Global } from "../../Context";
-import { Text, View, KeyboardAvoidingView } from "react-native";
+import { Text, View, KeyboardAvoidingView, ScrollView } from "react-native";
 
 import { screens as styles } from "../../Style";
 import Background from "../Background";
@@ -74,21 +74,23 @@ function Questions({ next, questionId, token, userId, searchId }) {
     ) : (
         <>
             <Background index={"1"} />
-            <KeyboardAvoidingView style={css.container} behavior="height">
-                <Text style={css.title}>{`Pergunta - ${blockIndex + 1}/${keys.length}`}</Text>
-                    <View style={css.content}>
-                        <Text style={css.content.text}>{blockData[keys[blockIndex]].question}</Text>
-                        <AnswerType
-                            next={{
-                                func: handleNextInBlock,
-                                text: (blockIndex + 1 < keys.length) ? "Próximo" : "Salvar"
-                            }}
-                            saveAnswer={setCurrentAnswer}
-                            type={blockData[keys[blockIndex]].type}
-                            questionInfo={{ counter: blockIndex, ...blockData[keys[blockIndex]]}}
-                        />
-                    </View>
-            </KeyboardAvoidingView>
+            <ScrollView>
+                <KeyboardAvoidingView style={css.container} behavior="height">
+                    <Text style={css.title}>{`Pergunta - ${blockIndex + 1}/${keys.length}`}</Text>
+                        <View style={css.content}>
+                            <Text style={css.content.text}>{blockData[keys[blockIndex]].question}</Text>
+                            <AnswerType
+                                next={{
+                                    func: handleNextInBlock,
+                                    text: (blockIndex + 1 < keys.length) ? "Próximo" : "Salvar"
+                                }}
+                                saveAnswer={setCurrentAnswer}
+                                type={blockData[keys[blockIndex]].type}
+                                questionInfo={{ counter: blockIndex, ...blockData[keys[blockIndex]]}}
+                            />
+                        </View>
+                </KeyboardAvoidingView>
+            </ScrollView>
         </>
     )
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Global } from "../../Context";
 import Block from "../../Components/Blocks";
 
-import Loader from "../../Components/Loader"
+import Loader from "../../Components/Loader";
 
 import { getSearchById } from "../../Service/Search";
 import { getSearchsWarning } from "../../Service/Warning";
@@ -10,7 +10,8 @@ import { getSearchsWarning } from "../../Service/Warning";
 function Search({navigation: { navigate }, route: {params}}) {
     const { token, user: {id} } = useContext(Global);
     const [searchInfo, setSearchInfo] = useState({});
-    const [pipeline, setPipeline] = useState(["Warning", "Introduction", "Questions"]);
+    // const [pipeline, setPipeline] = useState(["Warning", "Introduction", "Questions"]);
+    const [pipeline, setPipeline] = useState(["Warning", "Temporario", "Introduction", "Questions"]);
     const [index, setIndex] = useState(0);
     const [loader, setLoader] = useState(true);
     const [warning, setWarning] = useState({});
@@ -23,14 +24,15 @@ function Search({navigation: { navigate }, route: {params}}) {
             setSearchInfo(data);
 
             if (!warnings['first']) {
-                setPipeline(["Introduction", "Questions"])
-                setLoader(false)
+                // setPipeline(["Introduction", "Questions"]);
+                setPipeline(["Temporario", "Introduction", "Questions"]);
+                setLoader(false);
             } else {
-                setWarning(warnings)
-                setLoader(false)
-            }
+                setWarning(warnings);
+                setLoader(false);
+            };
         };
-        Jobs()
+        Jobs();
     }, [])
 
     const handleNext = () => {

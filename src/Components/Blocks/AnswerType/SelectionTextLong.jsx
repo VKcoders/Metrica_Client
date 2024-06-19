@@ -25,20 +25,20 @@ function SelectionTextLong({ data, next, action }) {
 
     return (
         <View style={css.container}>
-            {
-                options.map((text, index) => {
-                    const key = "question-" + index;
-                    return (
-                        <TouchableOpacity 
-                            key={key}
-                            style={[css.btnLong, key === selected && {backgroundColor: "green"}]}
-                            onPress={() => handlePress(key, text)}
-                        >
-                            <Text style={css.btnLong.text}>{text}</Text>
-                        </TouchableOpacity>
-                    )
-                })
-            }
+                {
+                    options.map((text, index) => {
+                        const key = "question-" + index;
+                        return (
+                            <TouchableOpacity 
+                                key={key}
+                                style={[css.btnLong, key === selected && {backgroundColor: "green"}]}
+                                onPress={() => handlePress(key, text)}
+                            >
+                                <Text style={css.btnLong.text}>{text}</Text>
+                            </TouchableOpacity>
+                        )
+                    })
+                }
         </View>
     )
 }

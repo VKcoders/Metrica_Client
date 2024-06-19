@@ -5,7 +5,7 @@ import { SafeAreaView, View, Text, TouchableOpacity, Image } from "react-native"
 import { screens as styles } from "../../Style";
 import { strings, icons } from "../../Localized";
 import Background from "../../Components/Background";
-import Sponcer from "../../Components/Atesp";
+// import Sponcer from "../../Components/Atesp";
 
 function Cover({route: { name }, navigation: { navigate }}) {
     // const [load, setLoad] = useState(true);
@@ -43,7 +43,7 @@ function Cover({route: { name }, navigation: { navigate }}) {
                         </TouchableOpacity>
                     // )
                 }
-                <Sponcer />
+                {/* <Sponcer /> */}
             </SafeAreaView>
         </>
     )

@@ -15,7 +15,7 @@ export default StyleSheet.create({
             textAlign: "center",
             color: "black"
         },
-        backgroundColor: "gray",
+        backgroundColor: "#aeb4b8",
         borderRadius: 10,
 
         width: "48%",

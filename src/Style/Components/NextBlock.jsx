@@ -4,7 +4,7 @@ const { height, width } = Dimensions.get('window')
 
 export default StyleSheet.create({
     container: {
-        backgroundColor: "#36454F",
+        backgroundColor: "#9aa2a7",
         padding: 15,
         borderRadius: 10,
         marginTop: 20,
@@ -12,8 +12,8 @@ export default StyleSheet.create({
         alignSelf: "flex-end"
     },
     text: {
-        color: "#E9DCC9",
+        color: "black",
         fontSize: 16,
-        fontWeight: "400"
+        fontWeight: "700"
     }
 })
