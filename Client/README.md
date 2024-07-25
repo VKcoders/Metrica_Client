@@ -24,4 +24,4 @@ Start the server
  - [Lottie React Native](https://www.npmjs.com/package/lottie-react-native)
  - [React Native Animated Loader](https://www.npmjs.com/package/react-native-animated-loader)
  - [React Native Version](https://www.npmjs.com/package/react-native-version)
- - [MMKV Storage]([https://www.npmjs.com/package/react-native-version](https://www.npmjs.com/package/react-native-mmkv-storage))
+ - [MMKV Storage](https://www.npmjs.com/package/react-native-mmkv-storage)
