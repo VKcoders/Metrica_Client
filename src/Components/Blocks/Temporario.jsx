@@ -22,10 +22,8 @@ function Warning({ next }) {
                 <View style={{
                     display: "flex",
                     flexDirection: "row",
-                    // justifyContent: "space-between",
                     alignContent: "center",
                     alignItems: "center",
-                    // backgroundColor: "green",
                     width: "35%"
                 }}>
 

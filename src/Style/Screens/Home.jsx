@@ -26,5 +26,20 @@ export default StyleSheet.create({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+    },
+    logout: {
+        btn: {
+            backgroundColor: "#666666",
+            padding: 10,
+            borderRadius: 10
+        },
+        text: {
+            color: "white",
+            textAlign: "center"
+        },
+        paddingTop: 10,
+        paddingLeft: 10,
+        paddingRight: 10,
+        width: 100,
     }
 })

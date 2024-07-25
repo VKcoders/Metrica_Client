@@ -38,7 +38,8 @@ const strings = {
                region: (where) => `Região: ${where}`,
                completion: (d, t) => `Status: ${d} / ${t}`,
                porcent: (p) => `${p}%`
-          }
+          },
+          logout: "SAIR"
      },
      btns: {
           confirm: "Concordar",

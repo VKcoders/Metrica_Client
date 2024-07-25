@@ -11,10 +11,9 @@ import { Login as Modal } from "../../Modal";
 import { generateToken } from "../../Service/Token";
 
 function Login({route: { name }, navigation: { navigate }}) {
-    const { setToken, setUser } = useContext(Global);
-    // const { setToken, setUser, setCachedUser, setCachedPassword } = useContext(Global);
+    const { setToken, setUser, setCachedUser, setCachedPassword, info, setInfo } = useContext(Global);
     const [loader, setLoader] = useState(false);
-    const [info, setInfo] = useState({username: '', password: ''});
+    // const [info, setInfo] = useState({username: '', password: ''});
     const [modal, setModal] = useState(false);
     const [hidePassword, setHidePassword] = useState(true);
     const [canSubmit, setCanSubmit] = useState(false);
@@ -37,8 +36,8 @@ function Login({route: { name }, navigation: { navigate }}) {
         const { status, token, name, id } = await generateToken(info);
 
         if (!!status) {
-            // setCachedUser(info.username);
-            // setCachedPassword(info.password);
+            setCachedUser(info.username);
+            setCachedPassword(info.password);
             setToken(token);
             setUser({id, name});
             navigate("HomeTab");

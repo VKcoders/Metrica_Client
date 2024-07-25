@@ -16,7 +16,6 @@ function Login({show, action, reset}) {
             animationType="fade"
             transparent={true}
             visible={show}
-            // onRequestClose={handleClose}
         >
             <View style={css.modal}>
                 <View style={css.container}>
