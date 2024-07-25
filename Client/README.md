@@ -5,18 +5,6 @@ Our survey app is the perfect tool for those looking to gather opinions, feedbac
 
 ## Running Locally
 
-Clone the project
-
-```bash
-  git clone git@github.com:Vincenzofdg/Metrica_Client.git
-```
-
-Navigate to the project directory
-
-```bash
-  cd Metrica
-```
-
 Install dependencies
 
 ```bash
@@ -36,3 +24,4 @@ Start the server
  - [Lottie React Native](https://www.npmjs.com/package/lottie-react-native)
  - [React Native Animated Loader](https://www.npmjs.com/package/react-native-animated-loader)
  - [React Native Version](https://www.npmjs.com/package/react-native-version)
+ - [MMKV Storage]([https://www.npmjs.com/package/react-native-version](https://www.npmjs.com/package/react-native-mmkv-storage))
