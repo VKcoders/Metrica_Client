@@ -14,8 +14,10 @@ export const getIntroQuestions = async (searchId, token) => {
       }
     );
 
-    // Ref Question on DB ... Rule
-    return data["section_03"].answer;
+    return {
+      question: data["section_03"].question,
+      answer: data["section_03"].answer,
+    }
   } catch (error) {
     console.error(error);
     return [];

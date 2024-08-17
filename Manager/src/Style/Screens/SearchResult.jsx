@@ -5,21 +5,28 @@ export default StyleSheet.create({
         padding: 20,
         flex: 1
     },
+    title: {
+        color: "black",
+        padding: 30,
+        textAlign: "center",
+        fontSize: 20,
+        fontWeight: "800"
+    },
     selectionContainer: {
         flex: 1,
         alignItems: "center",
-        justifyContent: "space-evenly"
     },
     selection: {
         text: {
-            textAlign: "center",
+            textAlign: "left",
             fontSize: 16,
             color: "black",
             fontWeight: "700"
         },
         backgroundColor: "#708090",
-        width: "50%",
+        width: "100%",
         padding: 15,
-        borderRadius: 20
+        borderRadius: 20,
+        marginTop: 25
     }
 })

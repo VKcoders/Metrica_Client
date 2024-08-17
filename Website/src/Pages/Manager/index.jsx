@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-import Loader from "../Components/Loader/Login";
-import Menu from "../Components/Menu";
-import Content from "./Content";
+import Loader from "../../Components/Loader/Login";
+import Menu from "../../Components/Menu";
+import Content from "../Content";
 
 function Dashboard() {
     const [loader, setLoader] = useState(true);

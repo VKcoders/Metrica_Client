@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "Environment Files",
+			"name": "Config Files"
+		},
+		{
+			"path": "Database",
+			"name": "SQL Structure"
+		},
+		{
+			"path": "Manager/src",
+			"name": "App Manager"
+		},
+		{
+			"path": "Client/src",
+			"name": "App Client"
+		},
+		{
+			"path": "Backend/src",
+			"name": "Backend"
+		}
+		
+	],
+	"settings": {}
+}

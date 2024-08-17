@@ -160,6 +160,7 @@ CREATE TABLE searches (
   qtd_users INT NOT NULL,
   users_meta INT NOT NULL,
   total INT NOT NULL,
+  name VARCHAR(255), 
 
   PRIMARY KEY (id),
   FOREIGN KEY (client_id) REFERENCES clients(id),

@@ -25,6 +25,16 @@ const strings = {
      Modal: {
           Login: ["Usuário ou Senha inválido.", "Confirmar"],
      },
+     Cards: {
+          Search: {
+               protocol: (i) => `Número de Protocolo da Pesquisa: ${i}`,
+               info: "Informações:",
+               introBlock: (i) => `Identificação: ${i} pergunta(s)`,
+               mainBlock: (i) => `Principal: ${i} pergunta(s)`,
+               qtdPeople: (i) => `${i} entrevistadores(s)`,
+               subTitle: (i) => `Meta: ${i}`
+          }
+     },
      charColors: [
           "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf", "#ff9896",
           "#f0a202", "#00798c", "#d81159", "#8f2d56", "#218380", "#73d2de", "#b07aa1", "#ffbc42", "#e4572e", "#a8c686", "#1a1b41",

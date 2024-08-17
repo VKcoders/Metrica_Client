@@ -2,10 +2,10 @@
   "name": "metrica_dashboard",
   "private": true,
   "version": "1.0.0",
-  "description": "Dashboard para monitorar e gerenciar o app Métrica",
+  "description": "",
   "author": "Vincenzo F. Di Giacomo",
   "type": "module",
-  "main": "electron.cjs",
+  "main": "index.jsx",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
