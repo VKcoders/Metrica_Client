@@ -4,6 +4,7 @@ const icons = {
      logo: require(path + "logo.png"),
      reload: require(path + "reload.png"),
      return: require(path + "return.png"),
+     unKnowUser: require(path + "unknow-user.png"),
      lock: {
           open: require(path + "lock-open.png"),
           close: require(path + "lock-close.png")

@@ -20,8 +20,31 @@ export default StyleSheet.create({
         marginBottom: 20
     },
     font: {
-        fontSize: 16,
+        fontSize: 13,
         fontWeight: "800",
         color: "black"
+    },
+    mainBar: {
+        text: {
+            color: "black",
+            fontWeight: "700"
+        },
+        innerBar: {
+            position: "absolute",
+            left: 0,
+            backgroundColor: "green",
+            height: "100%",
+        },
+        backgroundColor: "white",
+        width: "95%",
+        height: 45,
+        alignSelf: "center",
+        borderRadius: 10,
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        overflow: "hidden",
+        marginBottom: 30,
+        
     }
 })
