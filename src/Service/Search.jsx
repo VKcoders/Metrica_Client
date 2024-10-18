@@ -10,7 +10,6 @@ export const getAllSearchs = async (token) => {
         headers: { 'Authorization': token }
       }
     );
-
     return data[0];
   } catch (error) {
     console.error(error);
