@@ -5,6 +5,6 @@ const url = {
   emulator: "http://10.0.2.2:3001/metrica"
 }
 
-const api = axios.create({ baseURL: url.emulator });
+const api = axios.create({ baseURL: url.prod });
 
 export default api;
